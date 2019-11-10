@@ -30,4 +30,28 @@ function mapToSquare(src) {
   }
   return r
 }
+function reduceToTotal(sourceArray, startingPoint=0){
+  for(let i=0;i<sourceArray.length;i++){
+    startingPoint = startingPoint +sourceArray[i] ;
+  }
+  return startingPoint;
+}
+
+function reduceToAllTrue(sourceArray){
+ for(let i=0;i<sourceArray.length;i++){
+    if(sourceArray[i] ===false){
+      return false;
+    }
+  }
+  return true;
+}
+
+function reduceToAnyTrue(sourceArray){
+  for (const item of sourceArray) {
+    if(item == true){
+      return true;
+    }
+  }
+  return false;
+}
 
